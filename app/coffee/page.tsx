@@ -1,9 +1,16 @@
 import React from "react";
 
-function Coffee() {
-  fetch("https://jsonplaceholder.typicode.com/todos", {
+async function getTodoData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
     next: { revalidate: 10 },
   });
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+  return res.json();
+}
+
+async function Coffee() {
+  const data = await getTodoData();
 
   return (
     <>
