@@ -1,7 +1,9 @@
 import React from "react";
 
 function Coffee() {
-  fetch("111", { next: { revalidate: 10 } });
+  fetch("https://jsonplaceholder.typicode.com/todos", {
+    next: { revalidate: 10 },
+  });
 
   return (
     <>
