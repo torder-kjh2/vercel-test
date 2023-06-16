@@ -12,6 +12,7 @@ async function getData() {
 async function Coffee() {
   const data = await getData();
 
+  console.log(data);
   return (
     <>
       <h1>Coffee</h1>
