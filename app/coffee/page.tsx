@@ -1,6 +1,8 @@
 import React from "react";
 
 function Coffee() {
+  fetch("111", { next: { revalidate: 10 } });
+
   return (
     <>
       <h1>Coffee</h1>
