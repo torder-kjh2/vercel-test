@@ -1,9 +1,7 @@
 import React from "react";
 
 async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1", {
-    next: { revalidate: 10 },
-  });
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
   return res.json();
