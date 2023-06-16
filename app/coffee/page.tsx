@@ -1,6 +1,6 @@
 import React from "react";
 
-async function getTodoData() {
+async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
     next: { revalidate: 10 },
   });
@@ -10,7 +10,7 @@ async function getTodoData() {
 }
 
 async function Coffee() {
-  const data = await getTodoData();
+  const data = await getData();
 
   return (
     <>
